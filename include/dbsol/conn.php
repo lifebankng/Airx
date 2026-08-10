@@ -16,9 +16,9 @@ if (class_exists('Dotenv\Dotenv')) {
 }
 
 $dbhost = $_ENV['DB_HOST'] ?? $_ENV['dbhost'] ?? 'localhost';
-$dbuser = $_ENV['DB_USER'] ?? $_ENV['dbuser'] ?? 'lifebank_user';
+$dbuser = $_ENV['DB_USER'] ?? $_ENV['dbuser'] ?? 'root';
 $dbpass = $_ENV['DB_PASS'] ?? $_ENV['dbpass'] ?? '';
-$dbname = $_ENV['DB_NAME'] ?? $_ENV['dbname'] ?? 'airx';
+$dbname = $_ENV['DB_NAME'] ?? $_ENV['dbname'] ?? 'DatabaseName';
 
 if (!R::testConnection()) {
 	R::setup('mysql:host=' . $dbhost . ';dbname=' . $dbname, $dbuser, $dbpass);
